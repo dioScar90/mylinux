@@ -1,0 +1,37 @@
+alias goz="lvim ~/.zshrc"
+alias ali="lvim ~/.alias"
+
+# GIT
+alias g="git"
+alias gck="git checkout"
+alias gst="git status"
+alias gad="git add ."
+alias gps="git push"
+alias gpl="git pull"
+alias gcm="git commit -m"
+alias gcl="git clone"
+
+# SHELL
+alias update="echo \"sudo pacman -Syu\"; sudo pacman -Syu;"
+
+#alias ls="ls --color=auto"
+alias ls="exa --icons"
+alias cat="bat"
+alias find="fd"
+alias grep="rg"
+alias ps="procs"
+
+alias openmk="grip -b"
+alias restart="source ~/.zshrc"
+alias ls="exa --icons"
+#alias bat="bat--style=auto"
+alias cls="clear"
+alias proj="cd $HOME/myprojects"
+alias stud="cd $HOME/forstudy"
+alias ims="cd $HOME/myprojects/imessy && clear"
+alias goz="lvim ~/.zshrc"
+alias matrix="cmatrix"
+alias docalc='() { echo $((\$1\$2\$3)) | echo 0 };'
+
+source /opt/asdf-vm/asdf.sh
+
