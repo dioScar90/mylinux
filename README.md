@@ -12,7 +12,7 @@ To remove Ubuntu:
 - `wsl --unregister Ubuntu`
 
 Download Arch Linux file:
-- Go to this[https://github.com/yuk7/ArchWSL] repository and search for the zip file in *Docs > How to setup > 'Download' link on 'Method 1: zip file'*. Now extract the files and run `Arch.exe`.
+- Go to [this repository](https://github.com/yuk7/ArchWSL) and search for the zip file in *Docs > How to setup > 'Download' link on 'Method 1: zip file'*. Now extract the files and run `Arch.exe`.
 - After close the console, open `Arch.exe` again and wait it make the final configurations. When console show *[root@PC-NAME]#*, type *passwd* and define your root password. Now type:
     - `echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel`, to setup sudoers file.
     - `useradd -m -G wheel -s /bin/bash {username}`, where '{username}' is your root username (without brackets).
@@ -45,3 +45,15 @@ Windows Terminal:
 
 ZSH:
 - `yay -Sy zsh`
+
+Power10k Theme:
+- Go to [this repository](https://github.com/romkatv/powerlevel10k) and search for the zip file in *Installation > Arch Linux*.
+- `yay -S --noconfirm zsh-theme-powerlevel10k-git`
+- `echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
+
+Define ZSH as default shell:
+- `chsh -s /usr/bin/zsh`
+- Close Arch WSL.
+
+Installing additional fonts:
+- In the same Power10k repository, go to *Fonts* and go to *Manual font installation* on the page. Download all the *.tff* files and install it on Windows as you install a *.exe* file.
