@@ -47,9 +47,9 @@ ZSH:
 - `yay -Sy zsh`
 
 Power10k Theme:
-- Go to [this repository](https://github.com/romkatv/powerlevel10k) and search for the zip file in *Installation > Arch Linux*.
-- `yay -S --noconfirm zsh-theme-powerlevel10k-git`
-- `echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
+- Go to [this repository](https://github.com/romkatv/powerlevel10k) and search for the zip file in *Installation > Arch Linux*. Run these commands:
+    - `yay -S --noconfirm zsh-theme-powerlevel10k-git`
+    - `echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc`
 
 Define ZSH as default shell:
 - `chsh -s /usr/bin/zsh`
@@ -57,3 +57,14 @@ Define ZSH as default shell:
 
 Installing additional fonts:
 - In the same Power10k repository, go to *Fonts* and go to *Manual font installation* on the page. Download all the *.tff* files and install it on Windows as you install a *.exe* file.
+- Right-click on Windows Terminal's top and go to *Settings > Arch > Appearance > Font face* and change it to **MesloLGS NF**.
+- Close Windows Terminal and open it again with Arch.
+
+Configuring Power10k:
+- After open Arch right after configure ZSH, it will ask you to configure Power10k. **DO NOT** go ahead if you can't see correctly the symbols (like diamond, arrow etc.).
+
+ZSH Auto Suggestion:
+- Go to [this repository](https://github.com/zsh-users/zsh-autosuggestions) and go to *INSTALL.md > Manual*. Run these commands:
+    - `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions`
+    - `echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc`
+- Note: If you only type `source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh` it will run just once, then you must type with `echo 'source...` to put it into *zshrc* file (like we did before with Power10k Theme), and then it'll run everytime you start your session.
