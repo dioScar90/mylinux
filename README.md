@@ -73,15 +73,20 @@ Substitute commands (bat/cat, fd/find etc.):
 - `yay -Sy bat exa fd ripgrep procs grex`
 This command will install all of these listed new commands, that substitutes:
 
-| old | new |
-| --- | --- |
-| cat | bat |
-| exa | x |
-| find | fd |
-| grep | ripgrep |
-| x | procs |
-| x | grex |
+    | old | new |
+    | --- | --- |
+    | cat | bat |
+    | exa | ls |
+    | find | fd |
+    | grep | ripgrep |
+    | ps | procs |
+    | x | grex |
 
 To made alias for these commands:
 - `alias cat=bat`, for example, to everytime you write `cat` the terminal will understand as `bat`, and then you can use the new commands just by using the old commands. But the bad new about it is that you must type this alias everytime you open again your terminal. So, to make it permanently, you can create a *.alias* file and type all the aliases you want.
 - `vim ~/.alias`
+*ooooooooooor...*
+You can download my personal *.alias* file that I put in this repository, by typing this command:
+- `wget -c https://dioscar90.github.io/mylinux/alias.txt -O ~/.alias`
+After, type it to put all of these alises automatically in *.zshrc* evertytime you open your terminal:
+- `echo 'source ~/.alias' >> ~/.zshrc`
