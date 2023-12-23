@@ -135,3 +135,12 @@ Docker:
 - After configure this container, type `docker ps` again and you'll see it running.
 - Go to `localhost` and you can see the Docker's Getting Started Page.
 - Now you can stop this container (on Windows) and also remove, because it's useless.
+
+GitHub / SSH:
+- If you have *.ssh* or *.git* files, you can copy/paste to your Linux */home/{user}*.
+- Once copied, type in your terminal:
+    - `sudo chown -R .git*`
+    - `sudo chown -R .ssh/`
+    - `chmod 700 .ssh/`
+    - `chmod 600 .ssh/*`
+    - `chmod 644 .git*`
