@@ -68,3 +68,18 @@ ZSH Auto Suggestion:
     - `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions`
     - `echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc`
 - Note: If you only type `source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh` it will run just once, then you must type with `echo 'source...` to put it into *zshrc* file (like we did before with Power10k Theme), and then it'll run everytime you start your session.
+
+Substitute commands (bat/cat, fd/find etc.):
+- `yay -Sy bat exa fd ripgrep procs grex`
+This command will install all of these listed new commands, that substitutes:
+    | old | new |
+    -------------
+    | cat | bat |
+    | exa | |
+    | find | fd |
+    | grep | ripgrep |
+    | | procs |
+    | | grex |
+To made alias for these commands:
+- `alias cat=bat`, for example, to everytime you write `cat` the terminal will understand as `bat`, and then you can use the new commands just by using the old commands. But the bad new about it is that you must type this alias everytime you open again your terminal. So, to make it permanently, you can create a *.alias* file and type all the aliases you want.
+- `vim ~/.alias`
