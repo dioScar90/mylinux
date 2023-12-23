@@ -32,5 +32,3 @@ alias ims="cd $HOME/myprojects/imessy && clear"
 alias goz="lvim ~/.zshrc"
 alias matrix="cmatrix"
 alias docalc='() { echo $((\$1\$2\$3)) | echo 0 };'
-
-source /opt/asdf-vm/asdf.sh
