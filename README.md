@@ -108,15 +108,16 @@ That way, only that repository will run that version of *nodejs*. Of course, be 
 Repeat it for all languages you want. In my case:
 - .NET
 - nodejs
-- PHP
 - Python
-    After install the plugin, install:
+- PHP (after install the plugin, install):
     - `yay -Sy re2c gd postgresql-libs libzip`
     Then, *list-all*, *install* (tooooo long time...) and set as *global*. After:
-    - `php -m | grep mysql`, and you'll see that MySQL is installed.
-    - `php -m | grep imagick`, and you'll see that ImageMagick is **not** installed.
+    <!-- - `php -m | grep mysql`, and you'll see that MySQL is installed. -->
+    <!-- - `php -m | grep imagick`, and you'll see that ImageMagick is **not** installed. -->
     - `yay -Sy imagemagick`
     - `pecl install imagick`
     - *Please provide the prefix of ImageMatick installation [autodetect]* -> Press Enter.
-    - `echo "extension=imagick.so" >> $(asdf where php)/conf.d/php.ini`
-    - `php -m | grep imagick`, and you'll see that ImageMagick **is** installed.
+    <!-- - `echo "extension=imagick.so" >> $(asdf where php)/conf.d/php.ini` -->
+    <!-- - `php -m | grep imagick`, and you'll see that ImageMagick **is** installed. -->
+    - `pecl install redis`
+    - `echo "extension=redis.so" >> $(asdf where php)/conf.d/php.ini`
