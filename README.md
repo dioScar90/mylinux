@@ -121,3 +121,17 @@ Repeat it for all languages you want. In my case:
     <!-- - `php -m | grep imagick`, and you'll see that ImageMagick **is** installed. -->
     - `pecl install redis`
     - `echo "extension=redis.so" >> $(asdf where php)/conf.d/php.ini`
+
+Docker:
+- Download it by the [Docker official website](https://www.docker.com/) (pay attention to download the **Windows's** option).
+- After install and restart your PC, open Docker.
+- Navegate to *Settings (⚙️) > Resources > WSL integration* and allow **Arch**.
+- Click **Apply**.
+- Close Docker and also exit Arch WSL. Then, restart both.
+- Type `docker` in Arch. If it say that Docker is not installed yet and ask you to install, **do not** do it. Try to close all and restart again. If necessary, restart your PC.
+- Once `docker` run, type `docker ps` and you'll see that there is non container yet.
+- Now you can add some images, for example:
+    - `docker run -d -p 80:80 docker/getting-started`
+- After configure this container, type `docker ps` again and you'll see it running.
+- Go to `localhost` and you can see the Docker's Getting Started Page.
+- Now you can stop this container (on Windows) and also remove, because it's useless.
