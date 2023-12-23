@@ -96,12 +96,27 @@ ASDF, to run multiples versions of languages:
 You can set *yes* for all default options.
 Now you must turn it initialized everytime you open your terminal, as you do with your *.alias* file:
 - `echo 'source /opt/asdf-vm/asdf.sh' >> ~/.zshrc`
-Now we'll install a list of common languages. You can install if you want, and install others you want as well (go to [this repository](https://github.com/asdf-vm) and surch for the plugin you want). This three commands will 1) Install plugin of *nodejs*; 2) List all *nodejs* versions; 3) Install *nodejs* on the version you want; 4) Set the version you want to be the global (or default) version of your machine:
+Now we'll install a list of common languages. You can install if you want, and install others you want as well (go to [this repository](https://github.com/asdf-vm/asdf-plugins) and surch for the plugin you want). This three commands will 1) Install plugin of *nodejs*; 2) List all *nodejs* versions; 3) Install *nodejs* on the version you want; 4) Set the version you want to be the global (or default) version of your machine:
 - `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`
 - `asdf list-all nodejs`
-- `asdf install nodejs 21.4.0`
-- `asdf global nodejs 21.4.0`
+- `asdf install nodejs 21.4.0` or `asdf install nodejs latest`
+- `asdf global nodejs 21.4.0` or `asdf global nodejs latest`
+Now, if you run `node -v` you will get `21.4.0` in your console.
+If there is a project you need to run a different version of node, you can go to the root of that project and then type:
+- `asdf local nodejs <version-you-want>`
+That way, only that repository will run that version of *nodejs*. Of course, be sure you already have that parcitular version already installed in you machine. If not, install it, by typing `asdf install nodejs <version-you-want>` (as we did above).
 Repeat it for all languages you want. In my case:
+- .NET
 - nodejs
 - PHP
 - Python
+    After install the plugin, install:
+    - `yay -Sy re2c gd postgresql-libs libzip`
+    Then, *list-all*, *install* (tooooo long time...) and set as *global*. After:
+    - `php -m | grep mysql`, and you'll see that MySQL is installed.
+    - `php -m | grep imagick`, and you'll see that ImageMagick is **not** installed.
+    - `yay -Sy imagemagick`
+    - `pecl install imagick`
+    - *Please provide the prefix of ImageMatick installation [autodetect]* -> Press Enter.
+    - `echo "extension=imagick.so" >> $(asdf where php)/conf.d/php.ini`
+    - `php -m | grep imagick`, and you'll see that ImageMagick **is** installed.
