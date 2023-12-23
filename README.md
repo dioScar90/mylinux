@@ -90,3 +90,18 @@ You can download my personal *.alias* file that I put in this repository, by typ
 - `wget -c https://dioscar90.github.io/mylinux/alias.txt -O ~/.alias`
 After, type it to put all of these alises automatically in *.zshrc* evertytime you open your terminal:
 - `echo 'source ~/.alias' >> ~/.zshrc`
+
+ASDF, to run multiples versions of languages:
+- `yay -Sy asdf-vm`
+You can set *yes* for all default options.
+Now you must turn it initialized everytime you open your terminal, as you do with your *.alias* file:
+- `echo 'source /opt/asdf-vm/asdf.sh' >> ~/.zshrc`
+Now we'll install a list of common languages. You can install if you want, and install others you want as well (go to [this repository](https://github.com/asdf-vm) and surch for the plugin you want). This three commands will 1) Install plugin of *nodejs*; 2) List all *nodejs* versions; 3) Install *nodejs* on the version you want; 4) Set the version you want to be the global (or default) version of your machine:
+- `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`
+- `asdf list-all nodejs`
+- `asdf install nodejs 21.4.0`
+- `asdf global nodejs 21.4.0`
+Repeat it for all languages you want. In my case:
+- nodejs
+- PHP
+- Python
