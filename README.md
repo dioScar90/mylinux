@@ -1,6 +1,6 @@
 # My Linux
 
-This is a repository I will handle some files or annotations about my Linux personal use.
+This is a repository I will handle some files and annotations about my Linux personal use.
 
 To install WSL:
 - `wsl --install` | `wsl --install -d Ubuntu`
