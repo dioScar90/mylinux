@@ -8,6 +8,9 @@ To install WSL:
 Show all Linux distro installed:
 - `wsl -l -v`
 
+To set Arch as default distro:
+- `wsl --setdefault Arch`
+
 To remove Ubuntu:
 - `wsl --unregister Ubuntu`
 
