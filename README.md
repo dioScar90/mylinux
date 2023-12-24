@@ -139,8 +139,13 @@ Docker:
 GitHub / SSH:
 - If you have *.ssh* or *.git* files, you can copy/paste to your Linux */home/{user}*.
 - Once copied, type in your terminal:
-    - `sudo chown -R .git*`
-    - `sudo chown -R .ssh/`
+    - `sudo chown -R {user}: .git*`
+    - `sudo chown -R {user}: .ssh/`
     - `chmod 700 .ssh/`
     - `chmod 600 .ssh/*`
     - `chmod 644 .git*`
+
+VS Code integration:
+- Go to some repository and type `code .`
+- Allow instalation of everything it ask you to.
+- When VS Code open, install **WSL** extension.
